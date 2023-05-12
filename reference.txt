@@ -1,0 +1,49 @@
+5.6.1
+
+
+<properties>
+       
+       <java.version>1.8</java.version>
+        
+       <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+  
+
+@When("User should click the notfound option")
+public void user_should_click_the_forbidden_option() throws InterruptedException {
+	
+	
+
+	JavascriptExecutor js = (JavascriptExecutor) driver;
+    js.executeScript("window.scrollBy(0,350)", "");
+	
+	driver.findElement(By.xpath("//a[@id='forbidden']")).click(); 
+	Thread.sleep(3000);
+	
+	driver.close();
+}
+
+
+@test30
+Scenario Outline: verify the cyclos  contacts and add contact
+
+Given User launch open the url
+When User should enter the "<User>" and "<pass>"
+And User should click the add newest  button
+And User should enter the value and click submit button
+Examples:
+|User|pass| 
+|arav|1994|
+
+
+
+
+
+@test12
+Scenario Outline: verify the Demoqa link option 
+
+Given User should open the url
+When User should click the element button
+And User should click the link option
+And User should click the forbidden option 

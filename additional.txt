@@ -1,0 +1,14 @@
+stage ('clone') {
+            steps  {
+                     git clone: 'https://github.com/Aravindk1712/aaaabbbbcc/'
+                   }
+
+
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>4.8.1</version>
+</dependency>
+
+
+chek this dependency

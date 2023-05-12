@@ -1,0 +1,31 @@
+ mvn test -P parallel
+
+
+
+{
+   "server": "hub.browserstack.com",
+   "user": "YOUR_USERNAME",
+   "key": "YOUR_ACCESS_KEY",
+
+   "capabilities": {
+     "build": "cucumber-java-browserstack",
+     "name": "parallel_test",
+     "browserstack.debug": true
+   },
+
+   "environments": [
+     {
+       "browser": "chrome"
+     },
+     {
+       "browser": "firefox"
+     },
+     {
+       "browser": "safari"
+     }
+   ]
+ }
+
+Run your tests in parallel on BrowserStack using the following command:
+
+ mvn t

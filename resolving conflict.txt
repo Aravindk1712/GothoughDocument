@@ -1,0 +1,19 @@
+vi filename.txt
+escape --> : wq enter
+
+cat--> txt file name
+
+https://github.com/masilingam123/Test
+
+Scenario: verify the circuiId
+Given visiting the APIid
+When get response from APIid
+Then validate the response code
+
+
+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
+
+
+main token
+
+ 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 

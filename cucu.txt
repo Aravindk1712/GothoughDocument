@@ -1,0 +1,23 @@
+/*@regression2
+Scenario Outline: verify the cyclos switch theme
+
+Given User should open the url
+When User should enter the "<User>" and "<pass>"
+And User should click the switch theme button new  button
+
+Examples:
+|User|pass| 
+|arav|1994|
+
+ tags= "@test5" ,dryRun=false
+
+
+
+
+
+extent properties for read file 
+
+#extent.properties
+
+extent.reporter.spark.start=true
+extent.reporter.spark.out=test-output/SparkReport/Spark.html

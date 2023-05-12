@@ -1,0 +1,47 @@
+mvn -q clean verify test -Dcucucumber.options="src/test/resources/functionalTests --tags $tag"
+
+mvn -q clean verify -Dcucumber.filter.tags=" --tags @"$tag""
+
+mvn -q clean verify -Dcucumber.filter.tags=" --tags $tag""
+
+mvn -q clean verify -Dcucumber.filter.tags=" --tags $tag""
+
+mvn test -Dcucumber.options=”–tags @smoke”(working)
+
+mvn clean verify -Dcucumber.filter.tags="@smoke"  (working)
+
+mvn clean verify -Dcucumber.options="--tags @smoke --tags @sanity"
+
+mvn clean verify -Dcucumber.options="--tags @smoke"
+
+mvn clean verify -Dcucumber.filter.tags="@%tag%"(working)
+
+
+
+pipeline demo script
+
+pipeline {
+    agent any
+    stages {
+         stage('checkout') {
+             steps{
+             checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: '23eaaf2c-75c1-4c4a-9b34-76bac38d9980', url: 'https://github.com/Aravindk1712/Testcase.git']])
+         }
+         }  
+    
+        stage('build') {
+            
+        steps {
+               bat 'mvn clean verify'
+               
+            }
+        }
+    }
+
+
+
+
+
+
+-g_cucumberOptionsTags="(%tag%) and (not @ignore)"
+test verify -Dcucumber.filter.tags="@$tag"   this is working for parameter

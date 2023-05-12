@@ -1,0 +1,23 @@
+Scenario: verify the circuiId
+Given visiting the APIid
+When get response from APIid
+Then validate the response code
+Then verify the circuiId@Then("verify the circuiName")
+public void verify_the_circuiId() {
+    // Write code here that turns the phrase above into concrete actions
+   
+    String  id  = response.then().extract().path("path" ,"x.MRData.CircuitTable.Circuits[11].circuitId");
+	String CircuiId = "rodriguez";
+	if(id==CircuiId)
+	{System.out.println("verified");}
+}
+
+New token   :  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
+https://api.github.com/search/repositories?q=14032023
+
+
+\"name\":\""+RESTASSUREDAPI"\",\"description\":\"Demo Basic Rest Assured Repo\",\"homepage\":\"https://github.com\
+
+
+
+ https://api.github.com/search/repositories?q=cucumber

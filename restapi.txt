@@ -1,0 +1,33 @@
+import static io.restassured.RestAssured.*;
+import  static io.restassured.matcher.RestAssuredMatchers.*;
+import static org.hamcrest.Matchers.*:
+	
+
+import org.hamcrest.Matchers.*;
+public class Demo {
+	
+	public static void getResponseBody(){
+		   given().when().get("http://demo.guru99.com/V4/sinkministatement.php?CUSTOMER_ID=68195&PASSWORD=1234!&Account_No=1").then().log()
+		  .all();
+		 
+	  	}
+
+	
+	public static void getResponseStatus(){
+		   int statusCode= given().queryParam("CUSTOMER_ID","68195")
+		           .queryParam("PASSWORD","1234!")
+		           .queryParam("Account_No","1") .when().get("http://demo.guru99.com/V4/sinkministatement.php").getStatusCode();
+		   System.out.println("The response status is "+statusCode);
+
+		  
+		given().when().get(url).then().assertThat().statusCode(200);
+		}
+
+
+https://github.com/kavin1995/SeleniumDemo.git
+
+
+
+//,plugin={"pretty","json:target/result.json"}
+
+

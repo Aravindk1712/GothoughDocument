@@ -1,0 +1,52 @@
+git merge --abort for aborting
+git merge branch name
+
+
+
+
+
+steps to merge and conflict
+git clone "git hub link"
+file varum
+
+then open into folder 
+
+new branch
+
+git checkout -b new branch name kudukanum 
+
+
+git pull (erro kaatum) 
+
+git pull origin head (error )or  Git push --set-upstream origin name
+
+git push origin head
+
+
+git checkout main
+
+
+git add 
+git commit -m "add"
+git push
+
+
+
+gitr checkout masi
+
+git add .
+git commit 
+git push origin head 
+git checkout main
+git merge masi 
+
+conflict.....
+
+after resolve
+
+git add.
+
+git commit
+
+git push
+

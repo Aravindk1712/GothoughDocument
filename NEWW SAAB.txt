@@ -1,0 +1,50 @@
+@FindBy(xpath="//body/div[@id='app']/div[@class='body-height']/div[@class='home-content']/div[@class='home-body']/div[@class='category-cards']/div[1]/div[1]")
+	private WebElement Element;
+	public WebElement getElement() {
+		return Element;
+	}
+	
+	@FindBy(xpath="//span[normalize-space()='Text Box']")
+	private WebElement textBox;
+	public WebElement gettextBox() {
+		return textBox;
+	}
+	@FindBy(xpath="//input[@id='userName']")
+	private WebElement userName;
+	public WebElement getuserName() {
+		return userName;
+	}
+	@FindBy(xpath="//input[@id='userEmail']")
+	private WebElement userEmail;
+	public WebElement getuserEmail() {
+		return userEmail;
+	}
+	@FindBy(xpath="//textarea[@id='currentAddress']")
+	private WebElement currentAddress;
+	public WebElement getusercurrentAddress() {
+		return userEmail;
+	}
+	
+	@FindBy(xpath="//textarea[@id='permanentAddress']")
+	private WebElement permanentAddress;
+	public WebElement getpermanentAddress() {
+		return permanentAddress;
+	}
+
+	@FindBy(xpath="//span[normalize-space()='Check Box']")
+	private WebElement checkBox;
+	public WebElement getcheckBox() {
+		return checkBox;
+	}
+	
+	@FindBy(xpath="//button[@class='rct-option rct-option-expand-all']")
+	private WebElement expandAll;
+	public WebElement getexpandAll() {
+		return expandAll;
+	}
+	
+	@FindBy(xpath="//span[contains(text(),'Word File.doc')]")
+	private WebElement workFile;
+	public WebElement getworkFile() {
+		return workFile;
+	}

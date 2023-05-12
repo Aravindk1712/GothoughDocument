@@ -1,0 +1,70 @@
+run as administrator
+
+cd 
+
+
+C:\Users\VDI019\eclipse-workspace\executable\target\executable-0.0.1-SNAPSHOT-jar-with-dependencies.jar
+
+
+mvn clean compile assembly:single
+
+C:\Users\VDI019\eclipse-workspace\executable\target\executable-0.0.1-SNAPSHOT-jar-with-dependencies.jar
+
+
+
+java -jar target/AutomationProject-0.0.1-SNAPSHOT-jar-with-dependencies.jar
+
+
+mvn clean package assembly:single -Dmaven.test.skip=true
+
+WORKING
+C:\Users\VDI019\eclipse-workspace\executable\target>java -jar target/AutomationProject-0.0.1-SNAPSHOT-jar-with-dependencies.jar
+
+
+
+
+
+
+
+
+
+
+
+deldeted
+@SuppressWarnings("deprecation")
+@Given("User launch open the url")
+public void user_launch_open_the_url() {
+	t=new thirdPage();
+     LaunchBrowser();
+    LaunchURL("https://demo.cyclos.org/ui/home");
+    driver.manage().window().maximize();
+   
+   t.getlog().click();
+}
+
+@When("User should enter the {string} and {string}")
+public void user_should_enter_the_and(String User, String pass) {
+	driver.findElement(By.xpath("//input[@placeholder='User']")).sendKeys(User);
+	driver.findElement(By.xpath("//input[@placeholder='Password']")).sendKeys(pass);
+	driver.findElement(By.xpath("//span[text()='Submit']")).click();
+}
+@When("User should click the edit profile   button")
+public void user_should_click_the_edit_profile_button() throws InterruptedException {
+	driver.findElement(By.xpath("//a[@href='/users/self/profile/edit']//div[@class='quick-access-icon']//icon//*[name()='svg']")).click();
+	   
+    driver.findElement(By.xpath("//input[@id='landLinePhoneNumber']")).sendKeys("044-22771317");
+    driver.findElement(By.xpath("//button[@class='btn d-flex justify-content-center align-items-center w-100 h-100 btn-primary']")).click();
+   
+}
+@When("User should change the name and add mobile number and click save button")
+public void user_should_change_the_name_and_add_mobile_number_and_click_save_button() {
+	
+}
+
+@When("User should click the switch theme button new  button")
+public void user_should_click_the_switch_theme_button_new_button() throws InterruptedException {
+    
+	driver.findElement(By.xpath("//a[@href='/personal/settings']//div[@class='quick-access-icon']//icon//*[name()='svg']")).click();
+	
+	
+}
